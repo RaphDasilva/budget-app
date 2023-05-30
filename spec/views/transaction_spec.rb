@@ -19,7 +19,8 @@ RSpec.describe 'Transactions page', type: :feature do
     @category.save
 
     @groceries = Group.create(name: 'Groceries',
-                              icon: 'https://www.pngmart.com/files/11/Shopping-Bag-PNG-Free-Download.png', author: @user)
+                              icon: 'https://www.pngmart.com/files/11/Shopping-Bag-PNG-Free-Download.png',
+                              author: @user)
 
     @transaction = Expense.new(name: 'Food', amount: 100, author_id: @user.id)
     @transaction.groups << @groceries
