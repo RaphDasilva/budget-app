@@ -1,28 +1,27 @@
-<h1><%= @group.name %></h1>
+<div class="category">
+  <div><%= image_tag @group.icon %></div>
+  <div class="category-name">
+    <p class="c-name"> <%= @group.name %> </p>
+    <p class="c-time"> <%= @group.created_at.strftime("%d %b %Y") %> </p>
+  </div>
+  <div> <p class="c-amount"> $<%= @group.expenses.sum(:amount) %> </p></div>
+</div>
 
-<p>Icon: <%= image_tag @group.icon %></p>
-<p>Total Amount: <%= @group.expenses.sum(:amount) %></p>
 
-<h2>Transactions</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Amount</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @group.expenses.each do |expense| %>
-      <% if current_user.id == expense.author_id %>
-        <tr>
-            <td><%= expense.name %></td>
-            <td><%= expense.amount %></td>
-        </tr>
-      <%end%>
-    <% end %>
-  </tbody>
-</table>
+<div class="transaction-container">
+  <% @group.expenses.order(created_at: :desc).each do |expense| %>
+    <% if current_user.id == expense.author_id %>
+        <div class="category">
+          <div class="category-name">
+            <p class="c-name"> <%= expense.name %> </p>
+            <p class="c-time"> <%= expense.created_at.strftime("%d %b %Y") %> </p>
+          </div>
+          <div> <p class="c-amount"> $<%= expense.amount %> </p></div>
+        </div>
+        <% end %>
+         <% end %>
+      <div><%= link_to "Back to categories", root_path %></div>
+</div>
 
-<%= link_to "Add a new transaction", new_user_expense_path(@group.author) %>
-<%= link_to "Back to categories", root_path %>
+<div class="new-cat"><%= link_to "Add a new transaction", new_user_expense_path(@group.author) %></div>
