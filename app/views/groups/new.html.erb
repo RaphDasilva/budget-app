@@ -1,17 +1,16 @@
-<h1>New Category</h1>
+<div class="new-category">NEW CATEGORY</div>
 
-<%= form_with model: @group, url: user_groups_path do |form| %>
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+<div class="login-body">
+  <%= form_with model: @group, url: user_groups_path do |form| %>
+    <div class="field">
+      <%= form.text_field :name, placeholder: "Name" %>
+    </div>
 
-  <div>
-    <%= form.label :icon %>
-    <%= form.text_field :icon %>
-  </div>
+    <div class="field">
+      <%= form.text_field :icon, placeholder: "Icon link" %>
+    </div>
+    <%= form.submit "Create Category", class: "splash-button create-category" %>
+  <% end %>
+</div>
 
-  <%= form.submit "Create Category" %>
-<% end %>
-
-<%= link_to "Back to categories", root_path %>
+<div class="new-cat"><%= link_to "Back to categories", root_path %></div>

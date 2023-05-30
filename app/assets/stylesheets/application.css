@@ -13,3 +13,393 @@
  *= require_tree .
  *= require_self
  */
+
+/* Style for the category list container */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f0f2f1;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #3778c2;
+  z-index: 9999;
+  padding-left: 10px;
+  display: none;
+  flex-direction: column;
+}
+
+.menu--open {
+  display: flex;
+}
+
+.menu-ul {
+  list-style: none;
+}
+
+.menu-li i {
+  font-size: 34px;
+  color: white;
+}
+
+.menu-li {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.menu-li a,
+.menu-li form {
+  border-bottom: 1px solid white;
+  width: 80%;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.menu-li form button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+
+.close-x {
+  text-align: right;
+  font-size: larger;
+  margin: 20px 20px 70px 20px;
+}
+
+.menu-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 10px;
+}
+
+.menu-name i {
+  font-size: 80px;
+}
+
+.menu-name p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ham {
+  width: 30px;
+  filter: brightness(0) invert(1);
+  margin-right: 2px;
+}
+
+.categories-header {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  background-color: #3778c2;
+  font-weight: 500;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  color: #fff;
+  padding: 20px 10px 5px 10px;
+}
+
+.categories-header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.most-recent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3778c2;
+  padding: 20px 10px 15px 10px;
+  color: #fff;
+  font-size: small;
+}
+
+.mr h3 {
+  margin-top: -10px;
+}
+
+img {
+  width: 30px;
+  margin-right: 2px;
+}
+
+.category-container,
+.transaction-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: transparent;
+  padding: 10px;
+  width: 100%;
+  height: 70vh;
+  overflow-y: auto;
+  margin-bottom: 100px;
+}
+
+.transaction-container {
+  height: 53vh;
+}
+
+.category-container::-webkit-scrollbar,
+.transaction-container::-webkit-scrollbar {
+  display: none;
+}
+
+.category-container a {
+  text-decoration: none;
+  width: 79%;
+  margin: auto;
+  color: #434b54;
+  font-weight: bold;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.category div img {
+  width: 90px;
+  height: 90px;
+}
+
+.category-name {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.c-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #8b8e90;
+  font-size: 15px;
+}
+
+.c-time {
+  font-size: x-small;
+  color: #8b8e90;
+}
+
+.c-amount {
+  margin-bottom: 12px;
+}
+
+.new-cat {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #5fb523;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-cat a {
+  border: #fff 2px solid;
+  text-align: center;
+  padding: 15px 20px 20px 20px;
+  width: 90%;
+  height: 50px;
+  color: white;
+  text-decoration: none;
+}
+
+.material-icons {
+  font-size: 54px;
+  color: white;
+}
+
+.field-select {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style for the "NEW CATEGORY" div */
+.new-category {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Style for the login body container */
+.login-body {
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* Style for the form fields */
+
+.field input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for the submit button */
+.create-category {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.create-category:hover {
+  background-color: #0069d9;
+}
+
+.form-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 50px;
+  margin: 10px 0;
+}
+
+.field-select label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+}
+
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.field input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.splash-logo h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  animation: fade-in 2s ease-in-out;
+}
+
+.splash-links {
+  display: flex;
+  gap: 10px;
+}
+
+.splash-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.splash-button.one {
+  background-color: #4285f4;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,3 +1,9 @@
+<div class="login-container">
+<div class = "direction" > 
+        <%= link_to unauthenticated_root_path do %>
+          <i class="fa fa-arrow-left"></i>
+        <% end %>
+      </div>
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -32,3 +38,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
