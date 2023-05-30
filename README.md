@@ -23,21 +23,14 @@
 * Configuration
 <!-- PROJECT DESCRIPTION -->
 
-* Database creation
 # Budget App <a name="about-project"></a>
 
-* Database initialization
 > This mobile web app allows users to create categories and add transactions to each category. The app will show the total amount spent on each category. The app is built with Ruby on Rails. The app is deployed on Render.
 * How to run the test suite
 ## video demo 🎥
 
-* Services (job queues, cache servers, search engines, etc.)
-https://user-images.githubusercontent.com/97671133/234506964-443990ab-8222-44c9-9ff0-9d4f1ad26f27.mov
-
-* Deployment instructions
 ## Render Deploy 🚀
 
-* ...
 [Live demo here]
 
 ## 🛠 Built With <a name="built-with"></a>
