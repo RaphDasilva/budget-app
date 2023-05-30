@@ -1,6 +1,5 @@
 # Budget App
 
-* System dependencies
 - [📗 Table of Contents](#-table-of-contents)
 - [Budget App ](#budget-app-)
   - [video demo 🎥](#video-demo-)
