@@ -1,11 +1,4 @@
-# README
-<a name="readme-top"></a>
-
-<div align="center">
-  <h3><b>Budget App</b></h3>
-</div>
-* Ruby version
-# 📗 Table of Contents
+# Budget App
 
 * System dependencies
 - [📗 Table of Contents](#-table-of-contents)
