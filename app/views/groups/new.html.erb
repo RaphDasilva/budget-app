@@ -1,0 +1,16 @@
+<div class="new-category">NEW CATEGORY</div>
+
+<div class="login-body">
+  <%= form_with model: @group, url: user_groups_path do |form| %>
+    <div class="field">
+      <%= form.text_field :name, placeholder: "Name" %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :icon, placeholder: "Icon link" %>
+    </div>
+    <%= form.submit "Create Category", class: "splash-button create-category" %>
+  <% end %>
+</div>
+
+<div class="new-cat"><%= link_to "Back to categories", unauthenticated_root_path %></div>
