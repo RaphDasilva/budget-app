@@ -28,7 +28,7 @@
 > This mobile web app allows users to create categories and add transactions to each category. The app will show the total amount spent on each category. The app is built with Ruby on Rails. The app is deployed on Render.
 ## video demo 🎥
 
-[Video demo here](https://www.loom.com/share/72807faae3bd40759f6b9eaa28efb084)
+[Video demo here](https://www.loom.com/share/3fb763b8451f4503b6b0e701c63978db)
 
 ## Render Deploy 🚀
 
