@@ -16,7 +16,7 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
     @group.author_id = current_user.id
     if @group.save
-      redirect_to root_path, notice: 'Group was successfully created.'
+      redirect_to authenticated_root_path, notice: 'Group was successfully created.'
     else
       render :new
     end
